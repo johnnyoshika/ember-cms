@@ -1,3 +1,23 @@
-<h2 id='title'>Welcome to Ember.js</h2>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+		  	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			{{link-to "CMS" "index" class="navbar-brand"}}
+		</div>
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				{{#link-to "index" tagName="li" href=false}}{{link-to "Home" "index"}}{{/link-to}}
+				{{#link-to "leads" tagName="li" href=false}}{{link-to "Leads" "leads"}}{{/link-to}}
+			</ul>
+		</div>
+	</div>
+</div>
 
-{{outlet}}
+<div class="container">
+	{{outlet}}
+</div>

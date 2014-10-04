@@ -6,6 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+	this.resource('leads', function() {
+		this.resource('lead', {path: '/:contact_id'});
+	});
 });
 
 export default Router;
